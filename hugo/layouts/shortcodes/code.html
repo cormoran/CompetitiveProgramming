@@ -1,0 +1,6 @@
+{{ $srcfile := (index .Params 0 | default "main.cpp") }}
+{{ $srcpath := (printf "src/%s/%s" .Page.File.Dir  $srcfile) }}
+<pre><code>
+{{readFile $srcpath }}
+</code></pre>
+

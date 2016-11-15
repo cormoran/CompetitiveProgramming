@@ -1,0 +1,24 @@
+{{ define "main" -}}
+	{{ if and (isset .Params "featureimage") (not (eq .Params.featureimage "")) -}}
+	<article class="feature-image">
+		<header style="background-image: url('{{ .Site.BaseURL }}{{ .Params.featureimage }}')">
+			<h1 class="title">{{ .Title }}</h1>
+		</header>
+	{{- else -}}
+	<article>
+		<header>
+			<h1 class="title">
+                {{ if (isset .Params "href") -}}
+                <a href="{{ .Params.href }}">{{ .Title }} </a>
+                {{- else -}}
+                {{ .Title }}
+                {{- end }}
+            </h1>
+			{{ partial "post-meta" . }}
+		</header>
+	{{- end }}
+
+	<section class="post-content">
+		{{ .Content }}
+	</section>
+{{- end }}

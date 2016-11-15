@@ -1,0 +1,36 @@
+<ul>
+{{ range .Site.Menus.library }}
+	<li><a href="{{.URL}}">{{.Name}}</a></li>
+	    {{ if .HasChildren }}
+	    <ul>
+	    {{ range .Children }}
+	    <li><a href="{{.URL}}">{{ .Name }} </a></li>
+			{{ if .HasChildren }}
+		    <ul>
+		    {{ range .Children }}
+		    <li><a href="{{.URL}}">{{ .Name }}</a></li>
+				{{ if .HasChildren }}
+			    <ul>
+			    {{ range .Children }}
+			    <li><a href="{{.URL}}">{{ .Name }} </a></li>
+					{{ if .HasChildren }}
+				    <ul>
+				    {{ range .Children }}				    
+				        <li><a href="{{.URL}}">{{ .Name }} </a></li>
+                        {{ if .HasChildren }}
+                        Stack over flow... :)
+                        {{ end }}
+				    {{ end }}
+				    </ul>
+				    {{ end }}
+			    {{ end }}
+			    </ul>
+			    {{ end }}
+		    {{ end }}
+		    </ul>
+	    	{{ end }}
+	    {{ end }}
+	    </ul>
+	    {{ end }}
+{{end}}
+</ul>

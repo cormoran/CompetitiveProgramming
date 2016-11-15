@@ -1,0 +1,77 @@
+<ul>
+{{ $currentNode := . }}
+{{ range .Site.Menus.library }}
+
+	<li  class="{{if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}active{{end}}">
+    <a href="{{.URL}}">{{.Name}}</a>
+	</li>
+        {{ if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}
+        {{ $.Scratch.Set "CurrentMenu" . }}
+        {{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+	    {{ if .HasChildren }}
+	    <ul>
+	    {{ range .Children }}
+	    {{ if ne .Identifier ""}}
+	    <li class="{{if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}active{{end}}">
+	        <a href="{{.URL}}">{{ .Name }} </a>
+	    </li>
+			{{ if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}
+			{{ $.Scratch.Set "CurrentMenu" . }}
+			{{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+			{{ if .HasChildren }}
+		    <ul>
+		    {{ range .Children }}
+		    {{ if ne .Identifier ""}}
+		    <li class="{{if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}active{{end}}">
+		        <a href="{{.URL}}">{{ .Name }}</a>
+		    </li>
+
+				{{ if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}
+				{{ $.Scratch.Set "CurrentMenu" . }}
+				{{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+				{{ if .HasChildren }}
+			    <ul>
+			    {{ range .Children }}
+			    {{ if ne .Identifier ""}}
+			    <li class="{{if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}active{{end}}">
+			        <a href="{{.URL}}">{{ .Name }} </a>
+			    </li>
+
+					{{ if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}
+					{{ $.Scratch.Set "CurrentMenu" . }}
+					{{ $.Scratch.Add "Breadcrumbs" (print " > <a href='" .URL  "'>" .Name "</a>" )  }}
+					{{ if .HasChildren }}
+				    <ul>
+				    {{ range .Children }}
+				    {{ if ne .Identifier ""}}
+				    <li class="{{if or ($currentNode.IsMenuCurrent "library" .) ($currentNode.HasMenuCurrent "library" .) }}active{{end}}">
+				        <a href="{{.URL}}">{{ .Name }} </a>
+				    </li>
+				    
+				    {{ end }}
+				    {{ end }}
+				    </ul>
+				    {{ end }}
+				    {{ end }}
+			    
+			    
+			    {{ end }}
+			    {{ end }}
+			    </ul>
+			    {{ end }}
+			    {{ end }}
+		    
+		    {{ end }}
+		    {{ end }}
+		    </ul>
+		    {{ end }}
+		    {{ end }}
+
+	    {{ end }}
+	    {{ end }}
+	    </ul>
+	    {{ end }}
+	    {{ end }}
+	    
+{{end}}
+</ul>
