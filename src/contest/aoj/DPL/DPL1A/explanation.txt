@@ -1,0 +1,18 @@
+コインの金額 C0,C1,...,Ci,Cm
+
+全探索
+
+int rec(int i,int money)
+: i番目までのコインを使って金額moneyを作るときの最少枚数
+
+(メモ化可能)
+
+動的計画法
+
+MEMO[i][?] = min_{k,j}(MEMO[i-1][?-k*Cj])
+
+or
+
+MEMO[?][i] = min_{j,k}(MEMO[k][i-Cj]) : kいらない!
+
+という感じ？

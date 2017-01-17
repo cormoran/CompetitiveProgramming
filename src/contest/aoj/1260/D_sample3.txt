@@ -1,0 +1,12 @@
+3 4
+0E 1W
+0E 2E
+1E 2W
+2E 0W
+ababab
+-
+-
+aaabbb
+-
+-
+0 0
