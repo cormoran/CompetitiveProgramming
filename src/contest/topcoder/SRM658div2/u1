@@ -1,0 +1,61 @@
+#include <string>
+#include <vector>
+#include<iostream>
+using namespace std;
+
+#define rep(i,j) for(int i=0;i<(j);i++)
+
+
+
+class UnrelatedPaths {
+ public:
+  typedef pair<int,int> pii;
+
+  vector<vector<int> > children;
+  int ans=0;
+  // -> (number of children,number of node)
+  pii rec(int node){
+    int sumofchild=0;
+    int sumofpath=0;
+    vector<int> pathes,chils;
+    pathes.reserve(children[node].size());
+    chils.reserve(children[node].size());
+    for(int i : children[node]){
+      pii ret=rec(i);
+      sumofchild+=ret.first;
+      sumofpath+=ret.second;
+      pathes.push_back(ret.second);
+      chils.push_back(ret.first);
+    }
+    
+    cerr<<node<<endl;
+    cerr<<"sum child "<<sumofchild<<endl;
+    cerr<<"sum path "<<sumofpath<<endl; 
+    rep(i,pathes.size())cerr<<" "<<pathes[i];
+    cerr<<endl;
+    rep(i,chils.size())cerr<<" "<<chils[i];
+    cerr<<endl;
+    
+    for(int i=0;i<pathes.size();i++){
+      for(int j=i+1;j<pathes.size();j++){
+        ans+=pathes[i]*pathes[j];
+      }
+    }
+    int cpath=0;
+    for(int i=0;i<chils.size();i++){
+      for(int j=i+1;j<chils.size();j++){
+        cpath+=chils[i]*chils[j];
+      }
+    }
+    return make_pair(sumofchild+1, sumofpath + cpath);
+  }
+  
+  int maxUnrelatedPaths(vector <int> parent) {
+    children.resize(parent.size()+1,vector<int>());
+    rep(i,parent.size()){
+      children[parent[i]].push_back(i+1);
+    }
+    rec(0);
+    return ans;
+  }
+};
