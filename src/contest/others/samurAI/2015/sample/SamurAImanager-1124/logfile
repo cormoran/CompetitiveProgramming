@@ -1,0 +1,1566 @@
+### SamurAI 3x3 Game Log ###
+# <game name> <#turns> <width> <height>
+"Test Match" 192 15 15 20
+# Army sizes
+3 3
+# Samurai Info
+# Army 0 Samurai 0
+"Masamune" 2 40
+4 0 1 0 2 0 3 0 4
+5 7 0 5
+# Army 0 Samurai 1
+"Kenshin" 5 24
+5 0 1 0 2 1 0 1 1 2 0
+5 7 0 14
+# Army 0 Samurai 2
+"Shingen" 3 31
+7 -1 -1 -1 0 -1 1 0 1 1 -1 1 0 1 1
+5 7 9 14
+# Army 1 Samurai 0
+"Ujiyasu" 1 80
+4 0 1 0 2 0 3 0 4
+5 7 14 9
+# Army 1 Samurai 1
+"Nagamasa" 0 93
+5 0 1 0 2 1 0 1 1 2 0
+5 7 14 0
+# Army 1 Samurai 2
+"Yoshikage" 4 28
+7 -1 -1 -1 0 -1 1 0 1 1 -1 1 0 1 1
+5 7 5 0
+# Turn 0/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 1/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 2/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 3/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 4/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 5/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 6/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 7/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 8/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 9/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 10/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 11/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 12/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 13/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 14/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 15/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 16/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 17/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 18/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 19/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 20/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 21/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 22/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 23/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 24/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 25/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 26/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 27/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 28/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 29/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 30/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 31/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 32/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 33/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 34/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 35/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 36/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 37/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 38/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 39/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 40/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 41/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 42/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 43/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 44/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 45/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 46/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 47/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 48/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 49/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 50/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 51/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 52/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 53/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 54/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 55/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 56/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 57/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 58/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 59/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 60/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 61/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 62/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 63/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 64/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 65/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 66/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 67/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 68/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 69/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 70/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 71/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 72/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 73/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 74/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 75/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 76/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 77/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 78/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 79/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 80/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 81/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 82/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 83/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 84/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 85/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 86/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 87/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 88/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 89/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 90/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 91/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 92/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 93/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 94/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 95/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 96/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 97/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 98/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 99/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 100/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 101/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 102/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 103/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 104/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 105/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 106/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 107/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 108/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 109/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 110/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 111/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 112/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 113/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 114/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 115/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 116/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 117/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 118/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 119/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 120/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 121/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 122/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 123/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 124/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 125/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 126/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 127/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 128/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 129/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 130/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 131/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 132/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 133/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 134/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 135/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 136/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 137/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 138/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 139/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 140/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 141/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 142/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 143/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 144/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 145/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 146/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 147/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 148/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 149/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 150/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 151/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 152/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 153/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 154/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 155/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 156/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 157/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 158/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 159/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 160/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 161/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 162/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 163/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 164/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 165/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 166/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 167/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 168/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 169/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 170/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 171/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 172/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 173/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 174/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 175/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 176/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 177/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 178/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 179/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 180/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 181/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 182/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 183/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 184/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 185/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 186/192
+# <samurai id>
+3
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 187/192
+# <samurai id>
+0
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 188/192
+# <samurai id>
+1
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 189/192
+# <samurai id>
+4
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 190/192
+# <samurai id>
+5
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
+# Turn 191/192
+# <samurai id>
+2
+# <think time> <used time>
+100 0
+-1
+# Comments
+"Disqualified"
