@@ -4,7 +4,7 @@ date = "2016-11-15T23:51:38+09:00"
 href = "http://yukicoder.me/problems/433"
 +++
 
-<!-- more -->
+<!--more-->
 
 ## 概要
 
