@@ -5,7 +5,6 @@ using ll = long long;
 #define rep(i, j) for(int i=0; i < (int)(j); i++)
 #define repeat(i, j, k) for(int i = (j); i < (int)(k); i++)
 #define all(v) v.begin(),v.end()
-#define debug(x) cerr << #x << " : " << x << endl
 
 class Solver {
   public:
