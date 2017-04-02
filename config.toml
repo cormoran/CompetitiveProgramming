@@ -1,7 +1,7 @@
 
 contentdir = "src"
 layoutdir = "hugo/layouts"
-archetypedir = "hugo/archetype"
+archetypedir = "hugo/archetypes"
 datadir = "hugo/data"
 staticdir = "hugo/static"
 themesdir = "hugo/themes"
@@ -17,7 +17,7 @@ disqusShortname="cormoran"
 
 [params]
 	author = "cormoran"
-	description = "競技プログラミング系のログ置き場"
+	description = "競技プログラミング系の記録"
 	# The keywords will be added as a meta tag. Delimit them with a comma.
 	keywords = ""
 	# Either show custom avatar on the top
@@ -26,7 +26,7 @@ disqusShortname="cormoran"
 	# or use Gravatar by adding your email address to generate a unique avatar
 	#gravatar = "cormoran707@email.com"
 
-    # headerText = ""
+    headerText = "asdfgh"
 	# To add a header background to the main site, save your image under static/img/.
 	# If now image path is provided, a orange background will be shown instead.
 	headerImage = ""

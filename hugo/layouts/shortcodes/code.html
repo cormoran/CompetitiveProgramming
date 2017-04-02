@@ -1,6 +1,7 @@
 {{ $srcfile := (index .Params 0 | default "main.cpp") }}
 {{ $srcpath := (printf "src/%s/%s" .Page.File.Dir  $srcfile) }}
-<pre><code>
+<!-- 拡張子をclassとして追加する -->
+<pre><code class="{{ delimit (last 1 (split $srcfile ".")) " " }}">
 {{readFile $srcpath }}
 </code></pre>
 

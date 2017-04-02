@@ -1,4 +1,4 @@
-<ul>
+<ul class="library-list">
 {{ range .Site.Menus.library }}
 	<li><a href="{{.URL}}">{{.Name}}</a></li>
 	    {{ if .HasChildren }}
@@ -18,7 +18,7 @@
 				    {{ range .Children }}				    
 				        <li><a href="{{.URL}}">{{ .Name }} </a></li>
                         {{ if .HasChildren }}
-                        Stack over flow... :)
+                        	Stack over flow... :)
                         {{ end }}
 				    {{ end }}
 				    </ul>

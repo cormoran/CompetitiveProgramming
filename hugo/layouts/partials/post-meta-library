@@ -1,5 +1,5 @@
 <p class="meta">
-    {{ .Date.Format "1/_2, 2006" }} &middot; {{ .File.Dir }}
+    {{ .Date.Format "2006/01/02 Mon 15:4" }} &middot; {{ .File.Dir }}
 
     {{ if isset .Params "tags" -}}
         {{ $tagsLen := len .Params.tags }}

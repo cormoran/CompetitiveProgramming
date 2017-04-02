@@ -1,0 +1,74 @@
+
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+body {
+    font-size: 1em;
+}
+/*
+pre {
+    white-space: pre;
+}
+*/
+code, kbd, pre, samp {
+    font-size: 0.95em;
+}
+
+/* Highlight.js overwrite */
+
+.hljs-line-numbers {
+    text-align: right;    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+pre {
+    overflow: auto;
+    word-break: normal;
+    word-wrap: normal;
+}
+pre code {
+    white-space: pre;
+}
+
+pre {
+    position: relative;
+}
+code {
+    margin-top: 0px;
+}
+
+.hljs-language-tag-wrapper {
+    display: block;
+    margin-top: 1em;
+    background: #002b36;    
+}
+
+.hljs-language-tag {
+    display: inline-block;
+    color: white;
+    background-color: rgb(238, 102, 17);
+    padding: 2px 8px;                
+}
+
+.hljs-copy-button {
+    display: inline-block;
+    float: right;    
+    color: white;
+    padding: 2px 8px;  
+    cursor: pointer;
+}
+.hljs-copy-button:hover {
+    background-color: rgba(238, 102, 17, 1);
+}
+
+/* for library */
+.library-list ul {
+    padding-left: 1em;
+}

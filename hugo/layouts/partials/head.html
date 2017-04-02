@@ -10,7 +10,7 @@
 	{{ .Hugo.Generator }}
 
 	{{ "<!-- CSS -->" | safeHTML }}
-	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">
+	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css">	
 
 	{{ "<!--Favicon-->" | safeHTML }}
 	<link rel="shortcut icon" href="{{ .Site.BaseURL }}favicon.ico" type="image/x-icon">
@@ -25,17 +25,46 @@
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 	{{ "<!-- Google Fonts -->" | safeHTML }}
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">
+	<!--<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic" rel="stylesheet" type="text/css">-->
 
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-  
-  <!-- MathJax  -->
-    <script type="text/javascript"
-	    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
-    <script type="text/x-mathjax-config">
+	{{ "<!-- Highlight -->" | safeHTML }}
+  	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/solarized-dark.min.css">
+  	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  	<script src="{{ .Site.BaseURL }}js/highlightjs-line-numbers.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+  	<link rel="stylesheet" href="{{ .Site.BaseURL }}css/overwrite.css">
+	<script>
+		hljs.initHighlightingOnLoad();
+		hljs.initLineNumbersOnLoad();
+
+		window.addEventListener('load', function () {
+			Array.prototype.forEach.call(document.getElementsByTagName('pre'), function (pre) {
+				var wrapper = document.createElement('div'),
+					tag = document.createElement('div'),
+					copyButton = document.createElement('div');
+				var ext = pre.childNodes[1].getAttribute('class').split(" ")[0]
+						  .replace("language-", "")
+						  .replace("hljs", "?");
+				tag.innerHTML = ext;
+				copyButton.innerHTML = '<i class="fa fa-copy" aria-hidden="true"></i>';
+				var code = pre.getElementsByTagName('code')[1];
+				new Clipboard(copyButton, {
+					target: function () {
+						return code;
+					},
+				});
+				wrapper.classList.add("hljs-language-tag-wrapper");
+				tag.classList.add("hljs-language-tag");
+				copyButton.classList.add("hljs-copy-button");
+				wrapper.appendChild(tag);
+				wrapper.appendChild(copyButton);
+				pre.insertBefore(wrapper, pre.firstChild);
+			});
+		});				
+	</script>
+	{{ "<!-- MathJax  -->" | safeHTML }}
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
 	    tex2jax: {
 		    inlineMath: [['$','$'], ['\\(','\\)']],
@@ -47,9 +76,6 @@
 			    extensions: ["AMSmath.js", "AMSsymbols.js"] }
 	    }
     });
-    </script>
-    
-    <script type="text/x-mathjax-config">
     MathJax.Hub.Queue(function() {
 	    // Fix <code> tags after MathJax finishes running. This is a
 	    // hack to overcome a shortcoming of Markdown. Discussion at
