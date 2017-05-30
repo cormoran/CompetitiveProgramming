@@ -1,0 +1,6 @@
+{{ range where .Site.Pages "Section" "library" }}
+    <div>
+    {{ .Title }}
+    {{ .Content }}
+    </div>
+{{ end }}

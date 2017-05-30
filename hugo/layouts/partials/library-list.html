@@ -1,16 +1,20 @@
-<div class="posts">
-	{{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Params.menu" "!=" nil) }}
-	{{ range $paginator.Pages -}}
-	<div class="post-teaser">
-		<header>
-            {{ .File.Dir }}
-		    <h1>
-		    <a class="post-link" href="{{ .Permalink }}">
-		        {{ .Title }}
-		    </a>
-		    </h1>
-		    {{ partial "post-meta-library" . }}
-		</header>
-	</div>
-	{{- end }}
+{{ define "main" -}}
+<h1>
+    {{ .Title }}</h1>
+<div class="list">
+    <!-- 記事一覧 -->
+    {{ range (.Paginator 10).Pages }} {{ .File.Dir }} {{ .Render "li" }} {{ end }}
 </div>
+<!--次のページへ的なやつ-->
+{{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+<div>
+    <nav role="pagination">
+        {{ if .Paginator.HasPrev }}
+        <a href="{{ .Paginator.Prev.URL }}">&lt;</a> {{ end }}
+        <span class="">
+                            {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}
+                        </span> {{if .Paginator.HasNext}}
+        <a href="{{ .Paginator.Next.URL }}">&gt;</a> {{ end }}
+    </nav>
+</div>
+{{ end }} {{- end }}

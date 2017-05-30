@@ -1,4 +1,144 @@
+{{ define "rec5" -}}
+    asdfgh
+    {{ $Scratch := .myScratch }}
+    {{ with .myData}}
+    {{ range ($Scratch.Get .) }}
+        {{ $used_key := (printf "$used-%s" . ) }}
+        {{ if not ($Scratch.Get $used_key) }}
+            {{ $Scratch.Set $used_key 1 }}
+                <li>
+                    {{ $type := index (split . "~") 0 }}
+                    {{ $name := index (split . "~") 1 }}
+                    {{ if (eq $type "$file") }}
+                        <a href="{{ ($Scratch.Get .).RelPermalink }}">{{ $name }}</a>
+                    {{ else }}
+                        {{ $name }}
+                    {{ end }}
+                </li>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+{{- end }}
+
+{{ define "rec4" -}}
+    {{ $Scratch := .myScratch }}
+    {{ with .myData}}
+    {{ range ($Scratch.Get .) }}
+        {{ $used_key := (printf "$used-%s" . ) }}
+        {{ if not ($Scratch.Get $used_key) }}
+            {{ $Scratch.Set $used_key 1 }}
+                <li>
+                    {{ $type := index (split . "~") 0 }}
+                    {{ $name := index (split . "~") 1 }}
+                    {{ if (eq $type "$file") }}
+                        <a href="{{ ($Scratch.Get .).RelPermalink }}">{{ $name }}</a>
+                    {{ else }}
+                        {{ $name }}
+                        <ul>
+                        {{ block "rec5" (dict "myScratch" $Scratch "myData" . ) -}} {{- end}}
+                        </ul>
+                    {{ end }}
+                </li>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+{{- end }}
+
+{{ define "rec3" -}}
+    {{ $Scratch := .myScratch }}
+    {{ with .myData}}
+    {{ range ($Scratch.Get .) }}
+        {{ $used_key := (printf "$used-%s" . ) }}
+        {{ if not ($Scratch.Get $used_key) }}
+            {{ $Scratch.Set $used_key 1 }}
+                <li>
+                    {{ $type := index (split . "~") 0 }}
+                    {{ $name := index (split . "~") 1 }}
+                    {{ if (eq $type "$file") }}
+                        <a href="{{ ($Scratch.Get .).RelPermalink }}">{{ $name }}</a>
+                    {{ else }}
+                        {{ $name }}
+                        <ul>
+                        {{ block "rec4" (dict "myScratch" $Scratch "myData" . ) -}} {{- end}}
+                        </ul>
+                    {{ end }}
+                </li>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+{{- end }}
+
+{{ define "rec2" -}}
+    {{ $Scratch := .myScratch }}
+    {{ with .myData}}
+    {{ range ($Scratch.Get .) }}
+        {{ $used_key := (printf "$used-%s" . ) }}
+        {{ if not ($Scratch.Get $used_key) }}
+            {{ $Scratch.Set $used_key 1 }}
+                <li>
+                    {{ $type := index (split . "~") 0 }}
+                    {{ $name := index (split . "~") 1 }}
+                    {{ if (eq $type "$file") }}
+                        <a href="{{ ($Scratch.Get .).RelPermalink }}">{{ $name }}</a>
+                    {{ else }}
+                        {{ $name }}
+                        <ul>
+                        {{ block "rec3" (dict "myScratch" $Scratch "myData" . ) -}} {{- end}}
+                        </ul>
+                    {{ end }}
+                </li>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+{{- end }}
+
+{{ define "rec" -}}
+    {{ $Scratch := .myScratch }}
+    {{ with .myData}}
+    {{ range ($Scratch.Get .) }}
+        {{ $used_key := (printf "$used-%s" . ) }}
+        {{ if not ($Scratch.Get $used_key) }}
+            {{ $Scratch.Set $used_key 1 }}
+                <li>
+                    {{ $type := index (split . "~") 0 }}
+                    {{ $name := index (split . "~") 1 }}
+                    {{ if (eq $type "$file") }}
+                        <a href="{{ ($Scratch.Get .).RelPermalink }}">{{ $name }}</a>
+                    {{ else }}
+                        {{ $name }}
+                        <ul>
+                        {{ block "rec2" (dict "myScratch" $Scratch "myData" . ) -}} {{- end}}
+                        </ul>
+                    {{ end }}
+                </li>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+{{- end }}
+
 {{ define "main" -}}
-	{{ partial "library-list.html" . }}
-	{{ partial "pagination.html" . }}
+<h1>
+    {{ .Title }}
+</h1>
+<p>競技プログラミング向けのライブラリとその解説</p>
+<div class="list">
+    <!-- 記事一覧 -->
+    <div>
+        {{ range .Pages }}
+            {{ $.Scratch.Set "$parent" "/" }}
+            {{ $path := split .File.Dir "/" }}
+            {{ range $path | first (sub (len $path) 1) }}
+                {{ $name := printf "$path~%s" . }}
+                {{ $.Scratch.Add ($.Scratch.Get "$parent") (slice $name) }}
+                {{ $.Scratch.Set "$parent" $name }}
+            {{ end }}
+            {{ $name := printf "$file~%s" .File.BaseFileName }}
+            {{ $.Scratch.Add ($.Scratch.Get "$parent") (slice $name) }}
+            {{ $.Scratch.Set $name . }}
+        {{ end }}
+        <ul>
+            {{ block "rec" (dict "myScratch" $.Scratch "myData" "$path~library" ) -}} {{- end}}
+        </ul>
+    </div>
+</div>
 {{- end }}

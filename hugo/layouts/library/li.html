@@ -1,0 +1,14 @@
+<article class="entry" itemscope itemtype="http://schema.org/Blog">
+    <span class="entry-meta">
+                                    <time itemprop="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">
+	                                    {{ .Date.Format "2006/1/2" }}
+                                    </time>
+                                </span>
+    <h2 class="entry-title" itemprop="headline">
+        {{ .File.Dir }}
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
+    <div class="entry-summary">
+        {{ .Summary }}
+    </div>
+</article>
