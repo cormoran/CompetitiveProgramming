@@ -1,0 +1,115 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+PROCON_INCLUDE_PATH = '~/Program/src/github.com/cormoran/CompetitiveProgramming/src/library'
+
+import re
+import os
+import sys
+import argparse
+
+esc_red = '\033[31m'
+esc_green = '\033[32m'
+esc_yellow = '\033[33m'
+esc_blue = '\033[34m'
+esc_normal = '\033[39m'
+
+header_ignore = '/*^ingore^*/'
+
+
+def load_header(file, header_path_list):
+    if file == "bits/stdc++.h":
+        return '#include <bits/stdc++.h>'
+    for header_path in header_path_list:
+        path = header_path + '/' + file
+        if os.path.exists(path):
+            heada = open(path, 'r').read()
+            return heada.split(header_ignore)[-1]
+
+    sys.stderr.write('file : ' + file + ' was not found.\n')
+    sys.stderr.write(str(header_path_list))
+    return ''
+
+
+def find_path(file, include_path):
+    for header_path in include_path:
+        if header_path == "":
+            header_path = "."
+        path = header_path + '/' + file
+        if os.path.exists(path):
+            return path
+    return None
+
+
+def include(src_path, include_path, included):
+    if os.path.basename(src_path) == "stdc++.h":
+        return '#include <bits/stdc++.h>', included
+    if not os.path.exists(src_path):
+        sys.stderr.write('error : ' + src_path + ' was not found\n')
+        exit(1)
+    src = open(src_path, 'r').read()
+    included.append(os.path.basename(src_path))
+    while True:
+        match = re.search('^#\s*include\s*"(.*[^"])"', src, re.MULTILINE)
+        if match == None:
+            break
+        header_name = match.group(1)
+        if os.path.basename(header_name) in included:
+            src = src.replace(match.group(0), '')
+            continue
+        path = find_path(
+            header_name, [os.path.dirname(src_path), include_path])
+        if path:
+            header, included = include(path, include_path, included)
+            src = src.replace(match.group(0), header, 1)
+            sys.stderr.write('include : ' + header_name + '\n')
+        else:
+            sys.stderr.write('file : ' + header_name + ' was not found.\n')
+            src = src.replace(match.group(0), '// ' + match.group(0), 1)
+    return src, included
+
+
+def remove_waste(src):
+    src = re.sub('#pragma\s*once', '', src)
+    src = re.sub('\n+', '\n', src)
+    return src
+
+
+def debug_output(output, included):
+    out = esc_red + '=' * 50 + '\n'
+    out += '\t procon_precompile output \n'
+    out += '=' * 50 + '\n' + esc_normal
+    out += esc_blue + 'INCLUDED :' + esc_normal + '\n'
+    for head in included:
+        out += '\t' + head
+    out += esc_red + '=' * 50 + '\n' + esc_normal
+    out += esc_blue + 'OUTPUT :' + esc_normal + '\n'
+    out += output
+    out += esc_red + '=' * 50 + '\n' + esc_normal
+    sys.stderr.write(out)
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-d', '--debug', action='store_true',
+                        dest='debug', default=False)
+    parser.add_argument('-o', '--output', default='-', dest='output_file')
+    parser.add_argument('src_file')
+    parser.add_argument('-i', '--include_path',
+                        default=PROCON_INCLUDE_PATH, dest='include_path')
+    args = parser.parse_args()
+
+    output, included = include(args.src_file, os.path.expanduser(args.include_path), [])
+
+    output = remove_waste(output)
+
+    if args.output_file == '-':
+        sys.stdout.write(output)
+    else:
+        f = open(args.output_file, 'w')
+        f.write(output)
+        sys.stderr.write(
+            esc_green + 'precompile save succeeded!\n' + esc_normal)
+
+    if args.debug:
+        debug_output(output, included)
