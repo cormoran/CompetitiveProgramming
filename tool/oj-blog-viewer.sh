@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+cd `dirname $0`
+cd ..
+open http://127.0.0.1:1313/
+rm -rf ./local
+
+hugo server --theme hugo-theme-myblog --watch --destination ./local --buildDrafts=true --buildFuture=true
+
