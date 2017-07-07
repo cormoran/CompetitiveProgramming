@@ -6,6 +6,8 @@ title = "AOJ1612 3D Printing"
 
 +++
 
+幾何要素少なめな幾何
+
 <!--more-->
 
 ## 解法

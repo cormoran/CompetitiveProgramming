@@ -6,11 +6,9 @@ href = "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1190&lang=jp"
 
 +++
 
+ふうせんをとばそう．
+
 <!--more-->
-
-## 概要
-
-ふうせんをとばす．
 
 ## 解法
 
