@@ -16,62 +16,51 @@ template<class T> ostream& operator << (ostream &os , const vector<T> &v) { for(
 // pair
 template<class T, class U> ostream& operator << (ostream &os , const pair<T, U> &v) { return os << "<" << v.first << ", " << v.second << ">"; }
 
-const int INF = 1 << 30;
-const ll INFL = 1LL << 60;
-
-
+const int INF = 1e9;
+const int MAX_LEFT = 500 * 101 + 1;
 class Solver {
   public:
     bool solve() {
         int N; cin >> N;
-        if(N == 0) return 0;
+        if(N == 0) return false;
         vector<int> P(N); cin >> P;
-
-        auto update_max = [] (pii &a, pii b) {
-            if(a.first < b.first) {
-                a = b;
-            }
-            else if(a.first == b.first) {
-                set_min(a.second, b.second);
-            }
-        };
         
-        vector<map<int, pii>> DP(N + 1);
+        vector<vector<pii>> DP(N + 1, vector<pii>(MAX_LEFT, make_pair(0, -INF))); // := (500円, 使った金)
         DP[0][0] = make_pair(0, 0);
-        rep(i, N) {
-            for(auto par : DP[i]) {
-                int c = par.first;
-                update_max(DP[i + 1][c], DP[i][c]); // 買わない
-
-                int cc = (c + 1000 - P[i]%1000);
-                        update_max(DP[i + 1][cc % 1000], make_pair(DP[i][c].first + (cc >= 500), DP[i][c].second + P[i]));
-
-                int p = (P[i] + 500) % 1000;
-                if(c >= p) {
-                    update_max(DP[i + 1][c - p], make_pair(DP[i][c].first + 1, DP[i][c].second + P[i]));
+        rep(n, N) {
+            rep(left, MAX_LEFT) {
+                int num  = DP[n][left].first;
+                int used = DP[n][left].second * -1;
+                if(used >= INF) continue;
+                
+                // 買わない
+                set_max(DP[n + 1][left], DP[n][left]);
+                
+                used += P[n];
+                
+                int p = P[n] % 1000;
+                if(p == 0) {
+                    if(left >= 500) {
+                        set_max(DP[n + 1][left - 500], pii(num + 1, -1 * used));
+                    }
+                } else if(p <= 500) {
+                    int add = 500 - p;
+                    set_max(DP[n + 1][left + add], pii(num + 1, -1 * used));
+                } else {
+                    int need = p - 500;
+                    if(left >= need) 
+                        set_max(DP[n + 1][left - need], pii(num + 1, -1 * used));
+                    else { // 小銭を得る
+                        int add = 1000 - p;
+                        set_max(DP[n + 1][left + add], pii(num, -1 * used));   
+                    }
                 }
             }
         }
-        rep(i, N) {
-            int ans = 0, cost = INF;        
-            for(auto pp : DP[i + 1]) {
-                auto p = pp.second;
-                if(ans < p.first) ans = p.first, cost = p.second;
-                else if(ans == p.first) set_min(cost, p.second);
-                cerr << i << " " << pp.first << " " << p.first << " " << p.second << endl;
-            }
-            // cerr << i << " " << ans << " " << cost << endl;
-            //cout << ans << " " << cost << endl;
-        }
-        cerr << "--" << endl;
-        int ans = 0, cost = INF;        
-        for(auto pp : DP.back()) {
-            auto p = pp.second;
-            if(ans < p.first) ans = p.first, cost = p.second;
-            else if(ans == p.first) set_min(cost, p.second);
-        }
-        cout << ans << " " << cost << endl;        
-        return 1;
+        pii ans(-1, 0);
+        rep(i, MAX_LEFT) set_max(ans, DP[N][i]);
+        cout << ans.first << " " << ans.second * -1 << endl;
+        return true;
     }
 };
 
