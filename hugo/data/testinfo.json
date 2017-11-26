@@ -1,0 +1,50 @@
+{
+    "success": {
+        "bellmanford.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B"
+        ],
+        "bridge_and_articulation__articulation.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_A"
+        ],
+        "bridge_and_articulation__bridge.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_B"
+        ],
+        "dijkstra.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_A"
+        ],
+        "kruskal.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A"
+        ],
+        "max_flow.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_6_A"
+        ],
+        "min_cost_flow.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_6_B"
+        ],
+        "prim.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_2_A"
+        ],
+        "strongly_connected_components.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_3_C"
+        ],
+        "tree__diameter.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_A"
+        ],
+        "warshall_floyd.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C"
+        ]
+    },
+    "wrong": {
+        "strongly_connected_components__topological_sort.hpp": [
+            "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_A"
+        ]
+    },
+    "fail": {
+        "strongly_connected_components_detect_cycle.hpp": [
+            ""
+        ],
+        "strongly_connected_components__two_sat.hpp": [
+            ""
+        ]
+    }
+}

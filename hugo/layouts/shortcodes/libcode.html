@@ -1,0 +1,40 @@
+<!-- status -->
+{{ $testfile := (index .Params 0) }}
+{{ $s := .Scratch }}
+{{ $s.Set "cnt" 0 }}
+
+{{ range (index .Site.Data.testinfo.success $testfile)}}
+{{ $s.Add "cnt" 1 }}
+<div>
+    <span class="label label-success">TEST AC</span>
+    <a href="{{ . }}">{{ . }}</a>
+</div>
+{{ end }}
+{{ range (index .Site.Data.testinfo.wrong $testfile)}}
+{{ $s.Add "cnt" 1 }}
+<div>
+    <span class="label label-danger">TEST WA</span>
+    <a href="{{ . }}">{{ . }}</a>
+</div>
+{{ end }}
+{{ range (index .Site.Data.testinfo.wrong $testfile)}}
+{{ $s.Add "cnt" 1 }}
+<div>
+    <span class="label label-danger">COMPILE FAIL</span>
+    <a href="{{ . }}">{{ . }}</a>
+</div>
+{{ end }}
+
+{{ if eq (.Scratch.Get "cnt") 0 }}
+    <span class="label label-warning">NO TEST</span>
+{{ end }}
+
+<!-- src -->
+
+{{ $srcfile := (index .Params 0 | default "main.cpp") }}
+{{ $srcpath := (printf "src/%s/%s" .Page.File.Dir  $srcfile) }}
+<!-- 拡張子をclassとして追加する -->
+<pre><code class="{{ delimit (last 1 (split $srcfile ".")) " " }}">
+{{readFile $srcpath }}
+</code></pre>
+

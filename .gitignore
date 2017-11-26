@@ -1,2 +1,5 @@
 local
 public
+*.in
+*.out
+node_modules

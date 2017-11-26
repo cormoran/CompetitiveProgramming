@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+cd `dirname $0`
+cd ..
+rm -rf ./public
+hugo --theme hugo-theme-myblog
+
+filename=public.tar.gz
+
+tar czf $filename public
+scp $filename conoHa:/tmp/
+ssh conoHa -t '\
+cp /tmp/public.tar.gz ~/blog.cormoran-web.com/backup/procon-`date "+%Y-%m-%d--%H-%M"`.tar.gz; \
+cd /tmp/; \
+tar zxf public.tar.gz; \
+rm -rf ~/blog.cormoran-web.com/public/procon; \
+mv public ~/blog.cormoran-web.com/public/procon; \
+cd ~/blog.cormoran-web.com; \
+sudo /usr/local/bin/docker-compose restart; \
+'
