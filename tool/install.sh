@@ -1,11 +1,13 @@
-#!/usr/bin/env sh
-target='~/.bash_rc'
+#!/usr/bin/env bash
+target='~/.bash_profile'
 
 if [ $# -ge 1 ]; then
     target=$1
 fi
 
-echo "append some alias to $target (you can change target by 1st arg)"
+here="$( cd "$(dirname "$0")"; pwd)"/bin
+
+echo "append $here to PATH (write setting to $target)"
 echo -n "ok? ok/y/yes >"
 read OK
 case $OK in
@@ -14,10 +16,5 @@ case $OK in
         echo "canceled"
         exit 0 ;;
 esac
-
-for f in ./*; do
-    if [ `basename $f` != `basename $0` ]; then
-        echo "alias `basename ${f%.*}`=`pwd`/$f"
-        echo "alias `basename ${f%.*}`=`pwd`/$f" >> $target
-    fi
-done
+touch $target
+echo "export PATH=$here:\$PATH" >> $target

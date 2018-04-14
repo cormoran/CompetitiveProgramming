@@ -1,0 +1,4 @@
+# ref:
+# * Catching silly mistakes with GCC : http://codeforces.com/blog/entry/15547
+#
+g++-7 -std=c++14  -Wall -Wextra -DDEBUG -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -fsanitize=undefined -Wfloat-equal -Wshadow $@

@@ -2,7 +2,7 @@
 
 MYPWD=$PWD
 
-cd `dirname $0`/../
+cd `dirname $0`/../..
 ROOT=$PWD/src/
 
 if [[ $MYPWD =~ ${ROOT}contest.* ]]
@@ -12,5 +12,3 @@ then
 else
     echo "you should run this script in '$ROOT'"
 fi
-
-

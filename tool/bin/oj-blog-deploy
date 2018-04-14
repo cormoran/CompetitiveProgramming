@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-cd `dirname $0`
-cd ..
+cd `dirname $0`/../..
 rm -rf ./public
 hugo --theme hugo-theme-myblog
 
